@@ -37,7 +37,7 @@
                               <div onclick="view('3')"  class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div onclick="view('')"  class="button">&lt;</div>
+                                <div onclick="clrOne()"  class="button">&lt;</div>
                                 <div onclick="view('0')"  class="button">0</div>
                                 <div onclick="clr()"  class="button">C</div>
                             </div>
@@ -70,6 +70,9 @@
         }
         function clr(){
             document.getElementById('myPin').value = ""
+        }
+        function clrOne(){
+             document.getElementById('myPin').value = slice(0, -1)
         }
         document.getElementById('generatBtn').addEventListener('click', function(){
             var generatPin1 = Math.random()* 10000 
